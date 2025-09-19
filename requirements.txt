@@ -1,0 +1,13 @@
+# 推荐在 Python 3.12 环境安装，避免构建 C 扩展
+# 若必须在 3.13，请安装 MSVC Build Tools 或改用 3.12 venv
+
+# wordcloud 在部分 Python/平台组合下无预编译轮子，可能触发本地编译
+# 优先使用已发布轮子的版本
+wordcloud==1.9.3
+
+jieba==0.42.1
+numpy>=1.24.0,<3.0
+Pillow>=9.5.0
+python-docx>=1.1.2
+# matplotlib 可选，仅用于 debug/显示（非必须）
+matplotlib>=3.7.0; extra == "dev"
